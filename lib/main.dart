@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testlevel/screens/xscreens.dart';
 import 'package:testlevel/static/color.dart';
 
 void main() {
@@ -13,19 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: TLColor.body,
-        scaffoldBackgroundColor: TLColor.body,
-      ),
-      home: const HomePage(),
+          visualDensity: VisualDensity.comfortable,
+          primaryColor: TLColor.body,
+          scaffoldBackgroundColor: TLColor.body,
+          bottomAppBarTheme: const BottomAppBarTheme(color: TLColor.apps)),
+      home: const HomeNav(),
     );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
